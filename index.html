@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration Form</title>
+     <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="box">
+    <h2>Student Registration Form</h2>
+
+    <form id="myForm">
+
+      <label>Full Name:</label>
+      <input type="text" id="fullName" required>
+
+      <label>Student ID / LRN:</label>
+      <input type="text" id="studentId" required>
+
+      <label>Emergency Contact Name:</label>
+      <input type="text" id="emergencyName" required>
+
+      <label>Institutional Email (.edu or .edu.ph):</label>
+      <input type="email" id="instEmail" required>
+
+      <label>Personal Email:</label>
+      <input type="email" id="persEmail" required>
+
+      <label>Mobile Number (11 digits):</label>
+      <input type="tel" id="mobile" pattern="[0-9]{11}" placeholder="09123456789" required>
+
+      <label>Student Portal Password:</label>
+      <input type="password" id="password" required>
+
+      <label>Date of Birth:</label>
+      <input type="date" id="dob" min="1950-01-01" max="2026-11-15" required>
+      <p id="ageDisplay">Age: --</p>
+
+      <label>Units to Enroll (3 to 24):</label>
+      <input type="number" id="units" min="3" max="24" required>
+
+      <label>GPA / GWA (1.00 to 5.00):</label>
+      <input type="number" id="gwa" step="0.01" min="1.00" max="5.00" required>
+
+      <label>Year Level:</label>
+      <input type="radio" name="year" value="1st Year" required> 1st Year
+      <input type="radio" name="year" value="2nd Year"> 2nd Year
+      <input type="radio" name="year" value="3rd Year"> 3rd Year
+      <input type="radio" name="year" value="4th Year"> 4th Year
+
+      <label>Enrollment Status:</label>
+      <input type="radio" name="status" value="Regular" required> Regular
+      <input type="radio" name="status" value="Irregular"> Irregular
+
+      <label>Program:</label>
+      <select id="program" required>
+        <option value="">Select Program</option>
+        <option value="BSIT">BSIT</option>
+        <option value="BSMA">BSMA</option>
+        <option value="BSBA">BSBA</option>
+        <option value="BTLED">BTLED</option>
+      </select>
+
+      <label>Enrolled Lab Courses (Pick at least 1):</label>
+      <input type="checkbox" name="lab" value="Programming Lab"> Programming Lab <br>
+      <input type="checkbox" name="lab" value="Database Lab"> Database Lab <br>
+      <input type="checkbox" name="lab" value="Networking Lab"> Networking Lab <br>
+      <label>Proof of Grades or 2x2 Photo (Max 2MB):</label>
+      <input type="file" id="myFile" accept="image/png, image/jpeg, application/pdf" required>
+
+      <label>Extracurricular / Scholarship Notes:</label>
+      <textarea id="notes" rows="3"></textarea>
+
+      <br><br>
+      <input type="checkbox" id="agree"> I agree to the University Terms and Honor Code.
+      <button type="submit">Submit</button>
+
+    </form>
+  </div>
+
+  
+  <div id="myModal" class="modal">
+ <div class="modal-box">
+ <h3>Registration Details</h3>
+ <div id="output"></div>
+ <button type="button" onclick="closeModal()">Close</button>
+</div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
