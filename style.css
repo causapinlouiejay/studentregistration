@@ -3,7 +3,6 @@ body {
   background-color: #eeeeee;
   padding: 20px;
 }
-
 .box {
   background-color: white;
   max-width: 500px;
@@ -11,13 +10,11 @@ body {
   padding: 20px;
   border: 1px solid #cccccc;
 }
-
 label {
   display: block;
   margin-top: 15px;
   font-weight: bold;
 }
-
 input[type="text"],
 input[type="email"],
 input[type="tel"],
@@ -32,7 +29,6 @@ textarea {
   margin-top: 5px;
   box-sizing: border-box;
 }
-
 button {
   width: 100%;
   padding: 10px;
@@ -43,7 +39,6 @@ button {
   font-size: 16px;
   cursor: pointer;
 }
-
 .modal {
   display: none;
   position: fixed;
@@ -53,7 +48,6 @@ button {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
 }
-
 .modal-box {
   background-color: white;
   max-width: 450px;
